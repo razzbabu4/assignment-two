@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --primary-color:#13131880;
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,8 +14,11 @@ header,main{
 }
 .primary-button {
     border-radius: 8px;
+    border: 0;
     background-color: #FF5400;
     color: #FFFF;
+    width: 170px;
+    height: 50px;
     text-align: center;
     font-family: Mulish;
     font-size: 1rem;
@@ -60,7 +66,7 @@ header,main{
 .banner-button button{
     width: 170px;
     height: 50px;
-    color: #13131880;
+    color: var(--primary-color);
     padding: 16px 10px;
     border-radius: 8px;
     border: 0;
@@ -73,6 +79,34 @@ header,main{
 .banner-button .primary-button{
     color: #FFF;
 }
+
+/* tour section */
+.tour-container{
+    display: flex;
+    gap: 50px;
+}
+.tour-content p, ul>li{
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 1.5rem 0;
+}
+.tour-content ul{
+    padding: 0 40px;
+}
+.tour-content h1{
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.tour-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 
@@ -106,5 +140,7 @@ header,main{
         width: 100%;
         text-align: center;
     }
-
+    .tour-container{
+        flex-direction: column;
+    }
 }
