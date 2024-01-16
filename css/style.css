@@ -6,7 +6,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
     font-family: Mulish;
 }
 header,main{
@@ -23,7 +22,41 @@ header,main{
     text-align: center;
     font-size: 1rem;
     font-weight: 700;
+    cursor: pointer;
 }
+/* nav */
+nav{
+    margin-top: 50px;
+}
+.nav-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu-list ul>li>a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.menu{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--heading-color);
+    display: none;
+}
+
 
 /* Banner section start here */
 .banner{
@@ -104,7 +137,7 @@ header,main{
 }
 .tour-img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -158,6 +191,18 @@ header,main{
 .grid-img img{
     width: 100%;
     height: 100%;
+}
+.place{
+    position: relative;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 /* choose us section */
@@ -220,6 +265,123 @@ header,main{
 }
 
 
+/* Newsletter section */
+.newsletter-container{
+    margin: 50px 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(12,1fr);
+}
+.login-form{
+    grid-column: 1/span 5;
+    border-radius: 1rem;
+    border: 1px solid #FF5400;
+}
+.login-content{
+    margin: 30px;
+}
+.login-content h4{
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.login-content > p{
+    color: #5A5A5D;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+#input > input{
+    width: 94%;
+    margin-top: 20px;
+    padding: 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #1313180d;
+}
+.login-content .btn > button{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #FF5400;
+    color: #FFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.newsletter-img{
+    grid-column: 6/span 6;
+    position: relative;
+}
+
+.save-badge{
+    border-radius: 16px;
+    background: #FF5400;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    width: 300px;
+    position: absolute;
+    bottom: 15%;
+    left: 49%;
+    transform: rotate(-16deg);
+}
+.save-badge h3{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.save-badge p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* footer section */
+.footer-container{
+    background: #1313180d;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer-content{
+    padding: 100px 0;
+}
+.footer-logo h3, .nav-title h3{
+    color: var(--heading-color);
+    font-size: 2rem;
+    font-weight: 800;
+}
+.footer-content p{
+    color: #5A5A5D;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    max-width: 750px;
+    margin: 20px auto;
+}
+.footer-content a{
+    margin-right: 10px;
+}
+.footer-content hr{
+    max-width: 800px;
+    margin: 30px auto;
+}
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
 
 /* Responsive for mobile device */
 
@@ -227,6 +389,12 @@ header,main{
     header,main{
         padding: 0 40px;
         min-width: fit-content;
+    }
+    .menu-list ul>li>a{
+        display: none;
+    }
+    .menu{
+        display: block;
     }
     .banner{
         height: 100%;
@@ -291,4 +459,17 @@ header,main{
     .item-3{
         grid-column: 1/span 1;
     }
+    .newsletter-container{
+        grid-template-columns: 1fr;
+    }
+    .login-form{
+        grid-column: 1/span 1;
+    }
+    .newsletter-img{
+        grid-column: 1/span 1;
+    }
+    .footer-container{
+        width: 100%;
+    }
+    
 }
