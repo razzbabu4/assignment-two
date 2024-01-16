@@ -7,7 +7,6 @@
     padding: 0;
     font-family: Mulish;
 }
-
 header,main{
     padding: 0 135px;
     min-width: 992px;
@@ -20,14 +19,13 @@ header,main{
     width: 170px;
     height: 50px;
     text-align: center;
-    font-family: Mulish;
     font-size: 1rem;
     font-weight: 700;
 }
 
 /* Banner section start here */
 .banner{
-    background-image: url("/images/Group\ 13.png");
+    background-image: url("../images/Group 13.png");
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -83,6 +81,7 @@ header,main{
 /* tour section */
 .tour-container{
     display: flex;
+    align-items: flex-start;
     gap: 50px;
 }
 .tour-content p, ul>li{
@@ -103,7 +102,7 @@ header,main{
 }
 .tour-img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -117,10 +116,12 @@ header,main{
 @media screen and (max-width: 600px) {
     header,main{
         padding: 0 40px;
+        min-width: fit-content;
     }
     .banner{
         height: 100%;
-        width: auto;
+        width: 100%;
+        min-width: max-content;
         background-position: center;
     }
     .banner-title{
@@ -129,7 +130,7 @@ header,main{
     }
     .banner-content{
         width: 100%;
-        max-width: 400px;
+        max-width: 550px;
         margin: 10px auto;
     }
     .banner-button{
